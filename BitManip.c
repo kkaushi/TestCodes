@@ -28,9 +28,29 @@ void intToBinary(int num)
 	reverse_string(bin);
 	printf("%s\n",bin);
 }
+
+//Change Bits in Integer N at position i to j same as Integer M. Here i,j can take values from 0 to 31
+void changeBits(int n,int m, int i, int j)
+{
+	unsigned int bits=m;
+	//printf("Bit at 31 position of bits is: %d\n",bits<<31);
+	//printf("%d\n", bits);
+	bits<<=31-j;
+	//printf("%d\n", bits);
+	bits>>=i+31-j;
+	//printf("%d\n", bits);
+	bits<<=i;
+	printf("%d\n", bits);
+}
+
 void main()
 {
+	unsigned int temp=0;
+	/*	
 	int number = 12;
 	intToBinary(number);
+	*/
+	changeBits(97,30,1,3);
+	printf("%u\n",~temp);
 }
 
