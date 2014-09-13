@@ -1,8 +1,11 @@
 //Reverse a string in less than O(n)
+//Use QuickSort to sort the string and linear order traversal for detecting duplicate neighbour
 #include<iostream>
 #include<math.h>
 using namespace std;
 
+
+//Array partitioning involving repositioning of elements relative to key [First step of quicksort takes O(n) time]
 int partition(int start,int a[],int pivot,int size)
 {
 	int left=start,right=start+size-1,temp,newpivot,pivotvalue;
@@ -69,6 +72,7 @@ int partition(int start,int a[],int pivot,int size)
 		return pivot;
 }
 
+//Quicksort
 void quicksort(int start,int stop,void * a)
 {
 	int size,pivot,centerIndex;
@@ -90,23 +94,6 @@ void quicksort(int start,int stop,void * a)
 	quicksort(centerIndex+1,stop,a);
 }
  
-
-void str_reverse(string str)
-{
-	/*
-	int length=str.length();
-	int nByte=ceil((float)length/8);
-	char *bitVector=new char [nByte];
-	for(int i=0;i<length;i++)
-	{
-		bitVector[i]=0;
-	}
-	for(int i=0;i<lenght;i++)
-	{
-		str[i]%
-	*/
-}
-
 int main()
 {
 	string str1;	
