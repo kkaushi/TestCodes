@@ -17,24 +17,24 @@ void inorder(struct tree_node * n)
 	inorder(n->r);
 	return;
 }
-void MinBST(int *a, int l, int r,struct tree_node * n)
+struct tree_node * MinBST(int *a, int l, int r)
 {
 	int mid=(l+r)/2;
-	n=(struct tree_node *) malloc(sizeof(struct tree_node));
-	n->val=a[mid];	
-	n->l=NULL;
-	n->r=NULL;
+	struct tree_node * temp=(struct tree_node *) malloc(sizeof(struct tree_node));
+	temp->val=a[mid];	
+	temp->l=NULL;
+	temp->r=NULL;
 	if(l<=mid-1)	
-		MinBST(a,l,mid-1,n->l);
+		temp->l=MinBST(a,l,mid-1);
 	if(mid+1<=r)		
-		MinBST(a,mid+1,r,n->r);
-	return;
+		temp->r=MinBST(a,mid+1,r);
+	return temp;
 }
-
 int main()
 {
 	int arr[8]={1,2,3,4,5,6,7,8};
 	struct tree_node * head;
-	MinBST(arr,0,7,head);
-	//inorder(head);
+	head=MinBST(arr,0,7);
+	inorder(head);
+	printf("\n");
 }
