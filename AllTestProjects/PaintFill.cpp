@@ -62,4 +62,5 @@ void main(){
 	cout << "Matrix after PaintFill() is:\n";
 	PrintMatrix(a, nr, nc);
 	FreeMatrix(a, nr, nc);
+	cout << "IT's done!!\n";
 }
