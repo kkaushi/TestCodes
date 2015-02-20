@@ -1,4 +1,4 @@
-// simple regex, getline(), 
+// simple regex, getline()
 #include<iostream>
 #include<regex>
 
@@ -13,5 +13,4 @@ void main(){
 			std::cout << "Matched: "<<matches[0] << "\n";
 		}
 	}
-
 }

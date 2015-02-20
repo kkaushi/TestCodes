@@ -45,4 +45,15 @@ void main()
 		cout << *i << "\t";
 	}
 	cout << endl;
+
+	l.push_back(5);
+	l.insert(l.end(), 6);
+	l.insert(l.begin(), 0);
+
+	//traverse using range for loop
+	for (auto &i : l){
+		cout << i << "\t";
+	}
+	cout << endl;
+
 }
