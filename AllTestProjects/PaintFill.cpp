@@ -54,7 +54,7 @@ void Paintfill(int **a, int nr, int nc, int x, int y, int c){
 
 
 void main(){
-	int **a, nr = 2, nc = 2;
+	int **a, nr = 8, nc = 8;
 	cout << "Hi this is visual studio 2013! excited!\n";
 	a=RandomMatrix(nr, nc);
 	PrintMatrix(a, nr, nc);
